@@ -1,5 +1,7 @@
 # oidc-client
 
+This fork has been created to extend CordovaPopupWindow & CordovaPopupNavigator to return callback (as with the standard navigator). However the callback is immediate so only suitable if your logout endpoint doen't require input.
+
 Library to provide OpenID Connect (OIDC) and OAuth2 protocol support for client-side, browser-based JavaScript client applications. 
 Also included is support for user session and access token management.
 

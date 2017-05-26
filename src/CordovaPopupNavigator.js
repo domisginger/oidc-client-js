@@ -10,4 +10,16 @@ export default class CordovaPopupNavigator {
         let popup = new CordovaPopupWindow(params);
         return Promise.resolve(popup);
     }
+
+     callback(url, keepOpen, delimiter) {
+        Log.debug("CordovaPopupNavigator.callback");
+
+        try {
+            CordovaPopupWindow.notifyOpener(url, keepOpen, delimiter);
+            return Promise.resolve();
+        }
+        catch (e) {
+            return Promise.reject(e);
+        }
+    }
 }
